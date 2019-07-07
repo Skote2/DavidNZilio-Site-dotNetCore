@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DavidNZilio_Site_dotNetCore</title>
+    <title>@ViewData["Title"] - Zilio</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -15,13 +15,14 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
     </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <link id="Theme" rel="stylesheet" href="~/css/light.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">DavidNZilio_Site_dotNetCore</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Zilio</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,11 +33,30 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">David N.</button>
+                                <ul class="dropdown-list">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Business">Business</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Gaming">Gaming</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <button class="theme" onclick="toggleTheme()">
+                <img id="ThemeImg" width="24px" src="/light.png"/> light
+            </button>
         </nav>
     </header>
     <div class="container">
@@ -48,11 +68,11 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - DavidNZilio_Site_dotNetCore - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2019 - Zilio - <a asp-area="" asp-page="/Contact">Contact</a>
         </div>
     </footer>
 
-    <environment include="Development">
+    <!-- <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </environment>
@@ -70,7 +90,7 @@
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
     </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> -->
 
     @RenderSection("Scripts", required: false)
 </body>
