@@ -37,13 +37,13 @@
                                 <button class="dropbtn">David N.</button>
                                 <ul class="dropdown-list">
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-page="/Business">Business</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/DavidN/Business">Business</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-page="/Gaming">Gaming</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/DavidN/Gaming">Gaming</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/DavidN/Projects">Projects</a>
                                     </li>
                                 </ul>
                             </div>
@@ -54,7 +54,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="theme" onclick="toggleTheme()">
+            <button class="theme" onclick="">
                 <img id="ThemeImg" width="24px" src="/light.png"/> light
             </button>
         </nav>
@@ -72,7 +72,11 @@
         </div>
     </footer>
 
-    <!-- <environment include="Development">
+    <!-- None of this is getting used even though it's added by default.
+            - jquery is basically useless since ES6
+            - I'm not even certain what's included in the bootstrap js bundle (should look into it)
+    ======================================================================
+    <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </environment>
